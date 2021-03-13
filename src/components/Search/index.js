@@ -7,8 +7,12 @@ import SearchInput from '../SearchInput'
 
 function Search() {
     return (
-        <div>
+        <div className="search">
+
             <SearchInput />
+
+            
+
         </div>
     )
 }
