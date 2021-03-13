@@ -4,6 +4,7 @@ import './style.css';
 
 // Components
 import SearchInput from '../SearchInput'
+import Button from './../Button/index';
 
 function Search() {
     return (
@@ -11,7 +12,18 @@ function Search() {
 
             <SearchInput />
 
-            
+            <div className="search__buttons">
+
+                <Button>
+                    Pesquisa Google
+                </Button>
+
+                <Button>
+                    Estou com sorte
+                </Button>
+
+            </div>
+
 
         </div>
     )
