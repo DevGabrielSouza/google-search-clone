@@ -1,1 +1,7 @@
 /* Search form style */
+
+.search__buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
