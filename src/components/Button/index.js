@@ -1,10 +1,10 @@
 import React from 'react'
 import './style.css';
 
-function Button() {
+function Button({children}) {
     return (
         <button className="button">
-            
+            { children }
         </button>
     )
 }
