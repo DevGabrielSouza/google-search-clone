@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 // Icons
 import AppsIcon from '@material-ui/icons/Apps';
 import { Avatar } from '@material-ui/core';
+import SearchInput from '../../components/SearchInput';
 
 function Home() {
     return (
@@ -43,6 +44,11 @@ function Home() {
             </div>
 
             <div className="home__body">
+                <img src="https://www.logo.wine/a/logo/Google/Google-Logo.wine.svg" alt="Google Clone"/>
+
+                <div className="home__inputContainer">
+                    <SearchInput/>
+                </div>
 
             </div>
 
