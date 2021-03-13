@@ -3,6 +3,10 @@ import './style.css';
 
 import { Link } from 'react-router-dom';
 
+// Icons
+import AppsIcon from '@material-ui/icons/Apps';
+import { Avatar } from '@material-ui/core';
+
 function Home() {
     return (
         <div className="home">
@@ -30,6 +34,9 @@ function Home() {
                     <Link to="about">
                         Images
                     </Link>
+
+                    <AppsIcon/>
+                    <Avatar style={{ width: '25px', height: '25px' }} />
 
                 </div>
 
