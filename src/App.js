@@ -1,29 +1,41 @@
 import './App.css';
 import Home from './pages/Home';
 
+import { useState } from 'react';
+
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+// Context
+import SearchContext from './components/Search/context.js';
+import Search from './pages/Search';
+
 function App() {
+
+  const [searchTerm, setSearchTerm] = useState('Foo Fighters');
+  const [searchResults, setSearchResults] = useState({});
+
   return (
-    <div className="app">
+    <SearchContext.Provider value={{ searchTerm, setSearchTerm, searchResults, setSearchResults}}>
+      <div className="app">
 
-      <Router>
+        <Router>
 
-        <Switch>
+          <Switch>
 
-          <Route exact path="/">
-            <Home />
-          </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
 
-          <Route path="/search">
-            Search page
-          </Route>
+            <Route path="/search">
+              <Search />
+            </Route>
 
-        </Switch>
+          </Switch>
 
-      </Router>
+        </Router>
 
-    </div>
+      </div>
+    </SearchContext.Provider>
   );
 }
 
