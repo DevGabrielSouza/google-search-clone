@@ -1,16 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import './style.css';
 
-import { useState } from 'react';
+//Context
+import SearchContext from './../Search/context.js';
 
 //Icons
 import SearchIcon from '@material-ui/icons/Search';
 import KeyboardIcon from '@material-ui/icons/Keyboard';
 import MicIcon from '@material-ui/icons/Mic';
 
+
 function SearchInput() {
 
+    const {searchTerm, setSearchTerm} = useContext(SearchContext);
+
     const [search, setSearch] = useState('');
+
+    useEffect(() => {
+        setSearchTerm(search);
+    }, [search])
 
     return (
         <div className="searchInput">
