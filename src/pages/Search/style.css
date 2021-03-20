@@ -1,1 +1,5 @@
 /* search page style */
+
+.searchPage{
+    display: flex;
+}
