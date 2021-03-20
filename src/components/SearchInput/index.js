@@ -9,7 +9,7 @@ import MicIcon from '@material-ui/icons/Mic';
 
 function SearchInput({ defaultValue, getSearchResults }) {
 
-    const [search, setSearch] = useState(defaultValue);
+    const [search, setSearch] = useState(defaultValue ? defaultValue : '');
 
     return (
         <form action="/search" className="searchInput" onSubmit={getSearchResults}>
