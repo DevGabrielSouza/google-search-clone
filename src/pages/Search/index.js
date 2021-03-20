@@ -6,6 +6,7 @@ import axios from 'axios';
 
 // Context
 import SearchContext from './../../components/Search/context.js';
+import SearchInput from './../../components/SearchInput/index.js';
 
 export default function Search() {
 
@@ -38,6 +39,12 @@ export default function Search() {
     
     return (
         <div className="searchPage">
+
+            <header className="searchHeader">
+                <img width="120" src="https://www.logo.wine/a/logo/Google/Google-Logo.wine.svg" alt="Google Clone"/>
+                <SearchInput/>
+            </header>
+
             <SearchList items={searchResultItems} />
         </div>
     )
