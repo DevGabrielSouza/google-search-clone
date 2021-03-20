@@ -6,7 +6,7 @@ export default function SearchList({items}) {
     return (
         <div className="searchList">
             {items.map((item, index) => (
-                <SearchItem index={index} item={item} />
+                <SearchItem key={index} item={item} />
             ))}
         </div>
     )
