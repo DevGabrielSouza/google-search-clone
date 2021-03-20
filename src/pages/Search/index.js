@@ -42,7 +42,7 @@ export default function Search() {
 
             <header className="searchHeader">
                 <img width="120" src="https://www.logo.wine/a/logo/Google/Google-Logo.wine.svg" alt="Google Clone"/>
-                <SearchInput/>
+                <SearchInput defaultValue={searchedTerm} />
             </header>
 
             <SearchList items={searchResultItems} />
