@@ -2,4 +2,13 @@
 
 .searchPage{
     display: flex;
+    flex-direction: column;
+}
+
+.searchHeader{
+    width: 650px;
+    padding: 10px 0px;
+    margin-left: 180px;
+    display: flex;
+    align-items: center;
 }
