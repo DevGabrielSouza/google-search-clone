@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import SearchList from '../../components/SearchList/index.js';
 import './style.css';
 
@@ -41,7 +42,9 @@ export default function Search() {
         <div className="searchPage">
 
             <header className="searchHeader">
-                <img width="120" src="https://www.logo.wine/a/logo/Google/Google-Logo.wine.svg" alt="Google Clone"/>
+              <Link to="/">
+                    <img width="120" src="https://www.logo.wine/a/logo/Google/Google-Logo.wine.svg" alt="Google Clone"/>
+              </Link>
                 <SearchInput defaultValue={searchedTerm} />
             </header>
 
