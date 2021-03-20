@@ -1,0 +1,7 @@
+/* search list style */
+
+.searchList{
+    flex: 0 0 80%;
+    max-width: 75%;
+    margin-left: 180px;
+}
