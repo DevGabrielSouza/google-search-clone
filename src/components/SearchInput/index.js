@@ -10,7 +10,7 @@ import KeyboardIcon from '@material-ui/icons/Keyboard';
 import MicIcon from '@material-ui/icons/Mic';
 
 
-function SearchInput() {
+function SearchInput({ defaultValue, getSearchResults }) {
 
     const {searchTerm, setSearchTerm} = useContext(SearchContext);
 
@@ -21,12 +21,12 @@ function SearchInput() {
     }, [search])
 
     return (
-        <div className="searchInput">
+        <form action="/search" className="searchInput" onSubmit={getSearchResults}>
             <SearchIcon className="searchInput__icon" />
-            <input type="text" onChange={e => setSearch(e.target.value)} placeholder="Type here..." />
+            <input name="q" type="text" onChange={e => setSearch(e.target.value)} value={defaultValue} placeholder="Type here..." />
             <KeyboardIcon className="searchInput__icon" />
             <MicIcon className="searchInput__icon" />
-        </div>
+        </form>
     )
 }
 
