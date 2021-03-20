@@ -39,7 +39,7 @@ function Search() {
 
             <div className="search">
 
-                <SearchInput />
+                <SearchInput getSearchResults={getSearchResults} />
 
                 <div className="search__buttons">
 
