@@ -11,7 +11,7 @@ import Search from './pages/Search';
 
 function App() {
 
-  const [searchTerm, setSearchTerm] = useState('Foo Fighters');
+  const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState({});
 
   return (
