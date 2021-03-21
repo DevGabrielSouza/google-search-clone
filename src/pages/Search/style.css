@@ -10,10 +10,15 @@
     margin-left: 10%;
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
 @media(min-width: 767.98px){
+
     .searchHeader{
         width: 650px;
+        flex-direction: row;
     }
+
 }
+
