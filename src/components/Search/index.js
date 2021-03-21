@@ -19,7 +19,7 @@ function Search() {
 
     function getSearchResults(e){
 
-        
+        e.preventDefault();
 
         const googleCustomSearchApiUrl = `https://www.googleapis.com/customsearch/v1?key=AIzaSyBOiAGGbzofGZVls20Ubvh599b0cMvutfc&cx=65763cfd0eb1c2db2&q=${searchTerm}`
 
@@ -37,24 +37,24 @@ function Search() {
 
     return (
 
-            <div className="search">
+            <form action="/search" onSubmit={getSearchResults} className="search">
 
-                <SearchInput getSearchResults={getSearchResults} />
+                <SearchInput />
 
                 <div className="search__buttons">
 
-                    <Button getSearchResults={getSearchResults}>
+                    <Button type="submit">
                         Pesquisa Google
                     </Button>
 
-                    <Button>
+                    <Button type="button">
                         Estou com sorte
                     </Button>
 
                 </div>
 
 
-            </div>
+            </form>
     )
 }
 
