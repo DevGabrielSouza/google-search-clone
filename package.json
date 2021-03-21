@@ -1,6 +1,5 @@
 {
   "name": "google-search-clone",
-  "homepage": "https://dev-google-search-clone.netlify.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
