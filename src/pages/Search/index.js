@@ -15,7 +15,7 @@ export default function Search() {
     const urlParams = new URLSearchParams(queryString);
     const searchedTerm = urlParams.get('q');
 
-    const { searchResults } = useContext(SearchContext);
+    const { searchResults, getSearchResults } = useContext(SearchContext);
 
     const [searchResultItems, setSearchResultItems] = useState([]);
 
@@ -45,7 +45,11 @@ export default function Search() {
               <Link to="/">
                     <img width="120" src="https://www.logo.wine/a/logo/Google/Google-Logo.wine.svg" alt="Google Clone"/>
               </Link>
-                <SearchInput defaultValue={searchedTerm} />
+
+              <form action="/search" onSubmit={getSearchResults} className="search">
+                 <SearchInput />
+              </form>
+              
             </header>
 
             <SearchList items={searchResultItems} />
